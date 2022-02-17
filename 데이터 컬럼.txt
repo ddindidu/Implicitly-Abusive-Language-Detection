@@ -1,0 +1,22 @@
+Id
+Title
+Body
+Comment
+L.Type
+L.Abusive *
+lAttack
+L.Dem
+L.Implicit *
+L.Profanity
+lenComment
+lenContext
+
+
+
+
+# new dataset
+Context
+Comment
+Target
+lenComment
+lenContext

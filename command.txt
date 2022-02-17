@@ -1,0 +1,141 @@
+# 새로운 directory version으로
+# done
+python main.py --gpu_id=0 --epoch=3 --data_type='AbuseEval' --task_type='baseline'
+
+#done
+python main.py --gpu_id=1 --epoch=3 --num_labels=2 --data_type='AbuseEval' --task_type='ood'
+
+#done
+python main.py --gpu_id=0 --epoch=3 --data_type='AbuseEval' --task_type='baseline' --model_name='albert-base-v1'
+
+#done
+python main.py --gpu_id=1 --epoch=3 --num_labels=2 --data_type='AbuseEval' --task_type='ood' --model_name='albert-base-v1'
+
+# done
+python rf_run.py --data_type='AbuseEval' --task_type='baseline'
+
+#done
+python svm_run.py --data_type='CADD' --task_type='baseline' --kernel='rbf'
+
+python svm_run.py --data_type='AbuseEval' --task_type='baseline' --kernel='rbf' --svm_c=(1000)
+
+python svm_run.py --data_type='AbuseEval' --task_type='baseline' --kernel='rbf' --svm_c=(1000)
+
+
+
+python main.py --gpu_id=0 --epoch=3 --data_type='AbuseEval' --task_type='baseline' --mode='test'
+python main.py --gpu_id=1 --epoch=3 --data_type='CADD' --task_type='baseline' --mode='test'
+
+python main.py --gpu_id=0 --epoch=3 --data_type='AbuseEval' --task_type='ood' --num_labels=2 --mode='test'
+python main.py --gpu_id=1 --epoch=3 --data_type='CADD' --task_type='ood' --num_labels=2 --mode='test'
+
+
+
+
+python main.py --gpu_id=0 --epoch=3 --data_type='CADD' --task_type='baseline' --mode='train'
+
+python main.py --gpu_id=1 --epoch=3 --data_type='CADD' --task_type='ood' --num_labels=2 --mode='train'
+
+python main.py --gpu_id=0 --data_type='AbuseEval' --task_type='baseline' --mode='train' 
+
+python main.py --gpu_id=1 --data_type='AbuseEval' --task_type='ood' --num_labels=2 --mode='train' 
+
+
+
+python main.py --gpu_id=0 --data_type='AbuseEval' --task_type='ood' --num_labels=2 --mode='test' --threshold=0.65
+
+
+
+
+baseline
+python main.py
+
+python main.py --gpu_id=0 --epochs=3
+
+python main.py --gpu_id=0 --epochs=5
+
+python main.py --gpu_id=0 --epochs=3 --model_name_or_path='albert-base-v1'
+
+python main.py --gpu_id=1 --epochs=3 --model_name_or_path='xlm-roberta-base'
+
+
+ood
+# thres = 0.6
+python main.py --gpu_id=0 --task_type='ood' --num_labels=2 --epochs=1 --threshold=0.6
+
+# thres = 0.65
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=1 --threshold=0.65
+
+# thres = 0.7
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=1
+
+# thres=0.75
+python main.py --gpu_id=0 --task_type='ood' --num_labels=2 --epochs=1 --threshold=0.75
+
+# thres = 0.8
+python main.py --gpu_id=0 --task_type='ood' --num_labels=2 --epochs=1 --threshold=0.8
+
+# thres = 0.9 -> 별로
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=1 --threshold=0.9
+
+
+
+# ood epochs=3 thres = 0.6
+python main.py --gpu_id=0 --task_type='ood' --num_labels=2 --epochs=3 --threshold=0.6
+
+# ood epochs=3 thres = 0.65
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=3 --threshold=0.65
+
+# ood epochs=3 thres=0.7
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=3
+
+# ood epochs=3 thres=0.75
+python main.py --gpu_id=0 --task_type='ood' --num_labels=2 --epochs=3 --threshold=0.75
+
+# ood epochs=3 thres=0.8
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=3 --threshold=0.8
+
+# ood epochs=3 thres=0.85
+python main.py --gpu_id=0 --task_type='ood' --num_labels=2 --epochs=3 --threshold=0.85
+
+# ood epochs=3 thres=0.9
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=3 --threshold=0.9
+
+
+# ood epochs=3 thres
+
+
+# ood epochs=5 thres=0.7
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=5
+
+# ood epochs=5 thres=0.75
+python main.py --gpu_id=0 --task_type='ood' --num_labels=2 --epochs=5 --threshold=0.75
+
+# ood epochs=5 thres=0.8
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=5 --threshold=0.8
+
+
+
+
+
+
+label은 3개지만 2개로 나오게 학습/테스트 하는 경우
+python main.py --gpu_id=0 --task_type='ood' --num_labels=2 --epochs=1
+python main.py --gpu_id=1 --task_type='ood' --num_labels=2 --epochs=3
+
+
+
+
+
+
+# albert
+python main.py --gpu_id=0 --epochs=3 --model_name_or_path='albert-base-v1'
+
+python main.py --gpu_id=1 --epochs=3 --model_name_or_path='albert-base-v1' --task_type='ood' --thres=0.8
+
+
+
+# roberta
+python main.py --gpu_id=0 --epochs=3 --model_name_or_path='xlm-roberta-base'
+
+python main.py --gpu_id=1 --epochs=3 --model_name_or_path='xlm-roberta-base' --task_type='ood' --thres=0.8
